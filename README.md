@@ -1,4 +1,36 @@
 # Angular14BreakingBadSa
+## Notas para  standalone
+### provideAnimations
+function
+
+Returns the set of dependency-injection providers to enable animations in an application. See animations guide to learn more about animations in Angular.
+
+      
+      
+provideAnimations(): Provider[]
+
+    
+
+Parameters
+
+There are no parameters.
+Returns
+
+Provider[]
+### Usage notes
+
+The function is useful when you want to enable animations in an application bootstrapped using the bootstrapApplication function. In this scenario there is no need to import the BrowserAnimationsModule NgModule at all, just add providers returned by this function to the providers list as show below.
+
+      
+
+```
+      
+bootstrapApplication(RootComponent, {
+  providers: [
+    provideAnimations()
+  ]
+});
+```
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.
 
